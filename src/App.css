@@ -1,38 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding: 0 5px !important;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #ab7b60;
+}
+
+.color1 {
+  color: #617d98;
+}
+
+.color2 {
+  color: #102a42;
+}
+
+.color3 {
+  color: #ab7b60;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.fa-2x{
+  font-size: 30px;
+}
+
+.active {
+  color: #0084ff;
+}
+
+input{
+  background-color: #F1F5F8;
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+}
+
+input[type="text"] {
+  font-family: sans-serif;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.nav-item a,
+.about .about-home {
+  color: #3c2a42;
+  margin: 10px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-family: "Courier New", Courier, monospace;
+}
+.hero p {
+  font-size: 23px;
+}
+.btn {
+  background-color: #ab7b60;
+  border: none;
+  color: ghostwhite;
+}
+
+.featured-product {
+  background-color: #ecf4fb;
+}
+
+.card {
+  border: none;
+  /* width: 300px; */
+}
+.card-img {
+  height: 270px;
+}
+.card-img-product {
+  height: 180px;
+  width: 300px;
+  padding: 0 !important;
+  border-radius: 5px;
+}
+
+.mission {
+  background-color: #eaded7;
+}
+.mission h5,
+.about .about-page {
+  color: #453227;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.mission p {
+  color: #9b5935;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.mission .card {
+  background-color: #c5a491;
+}
+
+.mission-icon {
+  background-color: #eaded7;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin: 0 auto;
+  text-align: center;
+}
+.mission-icon i {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 13px;
+}
+
+.subscribe {
+  height: 320px;
+}
+.footer {
+  background-color: #222222;
+  color: #ecf4fb;
+  margin-top: auto;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.gridlay {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: 80px 80px 80px;  */
+  /* column-gap: 5px; */
+  /* row-gap: 15px; */
+
+  gap: 5px;
+}
+
+.price p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 300px;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: #46463b;
+}
+
+.overlay-home{
+  width: 343px;
+}
+
+
+/* The icon inside the overlay is positioned in the middle vertically and horizontally */
+.icon {
   color: white;
+  background-color: #9b5935;
+  font-size: 25px;
+  padding: 30px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* When you mouse over the container, fade in the overlay icon*/
+.image:hover .overlay {
+  opacity: 0.85;
 }
 
-.App-link {
-  color: #61dafb;
+.fa-search {
+  color: #fff;
+}
+/* When you move the mouse over the icon, change color */
+.fa-search :hover {
+  color: #eee;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-cart{
+  border: 1px solid rgb(190, 188, 188);
+  border-radius: 8px;
+}
+.not-found{
+  display:flex;
+  flex-direction: column;
+  height:50vh;
+  /* width: 1000vw; */
+  justify-content: center;
+  color: #102a42;
+  align-items: center;
 }

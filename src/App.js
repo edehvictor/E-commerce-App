@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import NavBar from './Components/NavBar';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Products from './Pages/Products/Products';
+import Product from './Pages/Product'
+import Cart from './Pages/Cart';
+import NotFound from './Pages/NotFound';
+import Footer from './Components/Footer';
+import { Routes, Route } from 'react-router-dom';
+import { MyContextProvider } from './Context/ProductContext';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MyContextProvider>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/products' element={<Products />} />
+          <Route path='/product/:id' element={<Product />} />
+          <Route path='cart' element={<Cart />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+        <Footer/>
+      </MyContextProvider>
     </div>
   );
 }

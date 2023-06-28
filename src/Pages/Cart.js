@@ -8,6 +8,7 @@
         const dispatch = useDispatch()
         const cartItem = useSelector((state) => state.cart.itemList)
         const [shippingFee, setShippingFee] = useState(5.34)
+        
         let subTotal = 0
         let totalOrder = 0
 

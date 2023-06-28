@@ -24,7 +24,7 @@ export const MyContextProvider = ({ children }) => {
             setLoading(true)
             const data = await fetch('https://www.course-api.com/react-store-products')
             const res = await data.json()
-            console.log(res,'response')
+            // console.log(res,'response')
             setHomeProducts(res)
             setFilterData(res)
             setData(res)
@@ -34,13 +34,12 @@ export const MyContextProvider = ({ children }) => {
             setLoading(false)
             // console.log(counter)
         } catch (error) {
-            // console.log(error)
+            console.log(error)
         }
     };
 
     useEffect(() => {
         fetchData()
-        console.log('hello world')
     }, []);
 
     const handleSearch = (e) => {
@@ -91,6 +90,7 @@ export const MyContextProvider = ({ children }) => {
     setFilterData(category)
     setCount(category.length);
         }
+        
     const value = {
         homeProducts,
         fetchData,

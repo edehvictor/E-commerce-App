@@ -7,7 +7,7 @@ import { useContext } from 'react';
 
 
 const Products = () => {
-  const { fetchData, filterData, count, search, data, handleSearch, handleFIlter, sideLink, category, handlePriceHandler, priceRange, shipping, setShipping, handleShipping, clearFilter } = useContext(ProductContext)
+  const { fetchData, filterData, count, search, data, handleSearch, handleFIlter, sideLink, category, handlePriceHandler, priceRange, shipping, handleShipping, clearFilter } = useContext(ProductContext)
 
 
   return (
